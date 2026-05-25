@@ -33,6 +33,81 @@ The win condition is *not* "cheapest per query" — it's **lower cost of trust p
 
 ---
 
+## 🌟 Salient features of rung 9 — the Self-Improving Assistant
+
+The thesis-winning configuration. Every capability below is **off** by default; you have to opt in one rung at a time, which is why the demo IS the ladder. Rung 9 has all of them turned on.
+
+### ⚛️ Atoms, not chunks
+The vault stores **atomic notes** — claim, definition, indicator, finding, target, method — each with its own id, body, source, attributes, and relations. Atoms are addressable across queries; chunks aren't. An answer cites `atom-58ab0c43` (a specific claim) instead of "chunk 12 of paper 3" (an anonymous text window).
+
+### 🏷️ Typed attributes (registry-validated)
+Every atom carries structured metadata: `{sdg_target: "5.2", year: 2030, evidence_strength: "strong", indicator_type: "outcome"}`. The **registry** is a per-vault schema layer that promotes recurring attribute keys into typed definitions with `allowed_values`, usage counts, and orphan detection. The agent can SQL-style filter the vault — `query_atoms(type="claim", where={sdg_target: "5.2"})` — instead of grepping prose.
+
+### 🔗 Relation graph for multi-hop reasoning
+Atoms link to other atoms via typed edges: `supports`, `contradicts`, `extends`, `refutes`, `part_of`, `cites`. The Answerer can call `traverse(atom_id, via=["contradicts"], hops=2)` to chain evidence across the vault. Some questions that are impossible at chunk tier become natural here ("show me claims about SDG 5 that contradict claims about SDG 8").
+
+### 🔍 Atom-level semantic search
+MiniLM-L6-v2 embeddings persist as numpy `.npz` files — not chunks, **atoms**. The Answerer's `semantic_search(query)` finds fuzzy-similar atoms by meaning, complementing the SQL-style attribute filter. No external vector DB; cosine search runs in-memory.
+
+### ✋ HITL curation (scholar gates the vault)
+Every atom proposed by the Extractor lands in a **drafts queue**. A scholar accepts / edits / rejects / deprecates. Only accepted atoms enter the vault. The vault has ~30% fewer atoms than the raw extraction, but every remaining atom carries a scholar's fingerprint, not just the LLM's. Curated atoms are **immutable** — there's no "edit accepted atom" path; revisions create new atoms with provenance back to the original.
+
+### 🧬 Self-improving prompts (Meta-Evaluator loop)
+The **Meta-Evaluator** reads rubric scores and verdict history, identifies patterns ("Extractor is producing too-broad claims when atomicity drops below 0.7"), and **proposes** a hardened prompt revision. Proposals don't auto-apply — a scholar promotes them. The active prompt for each agent role evolves: v1 → v2 → v3 over time, each version traceable to the rubric/verdict evidence that motivated it. This is the **only** rung where today's system is structurally different from yesterday's system, and the difference is scholar-promoted, not auto-applied.
+
+### 🛠️ Multi-tool answerer (5 retrieval primitives)
+The Answerer is a tool-calling agent (PydanticAI) with:
+
+| Tool | Purpose |
+|---|---|
+| `query_atoms` | SQL-style attribute filter — typed `where` clauses |
+| `semantic_search` | Cosine search over atom embeddings |
+| `traverse` | Graph traversal via relation type, bounded by hops |
+| `get_atom_full` | Fetch full body when a summary is insufficient |
+| `check_contradiction` | Symmetric edge-presence check between two atoms |
+
+The agent picks tools per question — typically chains 8-30 calls (plan → retrieve → refine → cite) for a single query. Every call is logged with latency, args, results, and any error.
+
+### 👥 Four-role agent team
+
+| Role | What it does | Active rungs |
+|---|---|---|
+| 🪓 **Extractor** | Decomposes chunks into atoms with attributes + suggested relations | 4-9 |
+| 💬 **Answerer** | Tool-calling synthesis over the vault | 4-9 |
+| 🎯 **Scorer** | Rates answers against a rubric (accuracy / citation / clarity / registry alignment) | 8-9 |
+| 🧬 **Meta-Evaluator** | Reads scorer + scholar feedback, proposes prompt hardening | 9 only |
+
+Each agent has its own scenario-aware prompt version. The Meta-Evaluator can target the Extractor's prompt, the Answerer's prompt, even its own.
+
+### 🔒 Auditable, versioned, immutable where it matters
+- **Atoms** — immutable once accepted. New evidence creates new atoms, not edits.
+- **Prompts** — versioned with `parent_version`, `state` (proposed/active/archived), `based_on_events` (the rubric/verdict ids that triggered the proposal), `accept_rate`.
+- **Tool calls** — every call logged with `session_id`, args, latency, n_results, error_message. The Observability page reads this directly; no separate telemetry layer.
+- **Verdicts** — every scholar accept/edit/reject is an `EvalEvent` row, timestamped, with the draft id and any edit delta.
+
+### 📡 Full observability (no logfire dependency needed)
+The Observability page surfaces:
+- KPI row: total tool calls · avg latency · total cost · errors
+- Latency histogram (8 buckets, 0-100ms → 10s+)
+- Cost rollup by role (Extractor / Answerer / Scorer / Meta-Evaluator) and by day
+- Tool-call table (filterable by agent, tool, session)
+- Activity feed (chronological merge of tool calls + verdicts + prompt promotions + meta-eval proposals)
+- Error log (any tool call where `error_message is not null`)
+
+All from the same SQLite tables the agents write to — no separate observability backend.
+
+### 🎯 Where the cost actually goes
+The 64× cost spike vs cold-read isn't waste. It's:
+
+1. **Multi-tool agent loops** — 8-30 tool calls per question with intermediate reasoning
+2. **Relation traversal** — unbounded graph walks (production would cap at hops=2)
+3. **Evolved synthesis prompt discipline** — the rung-9 Answerer prompt is markedly more thorough than v1, producing longer, better-grounded answers
+4. **Half the answers cite nothing rather than weakly grounding** — when no atom is a strong-enough citation, the evolved prompt outputs an uncited answer rather than a fabricated cite. You're paying for the agent's *restraint*
+
+What you DON'T pay for: re-extraction (atoms are persistent), re-curation (verdicts persist), re-embedding (atoms only embed once at acceptance).
+
+---
+
 ## What's in the demo
 
 The Streamlit walkthrough has **18 pages**:
