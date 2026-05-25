@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Env / secrets
+.env
+.env.local
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Personal Claude/agent local state — do NOT push
+.claude/
+.remember/
+
+# Demo's per-machine state we keep separate
+demo/data/state.json
+demo/data/state.json.lock
+
+# Keep the seeded SQLite + embeddings IN the repo so the demo works out of the box.
+# (Uncomment below if you'd rather have a clean clone that requires `make seed`.)
+# demo/data/shared.sqlite
+# demo/data/state.sqlite
+# demo/data/vaults/*/state.sqlite
+# demo/data/embeddings/*.npz

@@ -1,0 +1,27 @@
+# Tool allow-list for the book_writer agent.
+
+[allow]
+tools = [
+    # Everything paper_writer uses
+    "retrieval.find_similar_atoms",
+    "retrieval.find_related_atoms",
+    "retrieval.semantic_search",
+    "retrieval.keyword_search",
+    "atoms_vault.read_atom",
+    "atoms_vault.list_atoms",
+    "registry.list_attribute_keys",
+    "registry.list_relation_keys",
+    "registry_graph.traverse",
+
+    # Plus cross-chapter coherence
+    "contradictions.find_contradicting_atoms",
+    "cross_paper.find_supporting_evidence",
+]
+
+[deny]
+tools = [
+    "atoms_curate.accept",
+    "atoms_curate.edit",
+    "atoms_curate.reject",
+    "atoms_vault.write_atom",
+]

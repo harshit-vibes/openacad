@@ -1,0 +1,32 @@
+# Tool allow-list for the paper_writer agent.
+#
+# When the agent is implemented, the harness will resolve each entry to the
+# matching callable in `tools/*.py` and attach it to the PydanticAI Agent's
+# tool list. Glob patterns let an agent reach a cluster without enumerating.
+
+[allow]
+tools = [
+    # Retrieval — find atoms that answer the brief
+    "retrieval.find_similar_atoms",
+    "retrieval.find_related_atoms",
+    "retrieval.semantic_search",
+    "retrieval.keyword_search",
+
+    # Atom reads — fetch full bodies and traverse relations
+    "atoms_vault.read_atom",
+    "atoms_vault.list_atoms",
+
+    # Registry lookups — know what attribute/relation keys are well-typed
+    "registry.list_attribute_keys",
+    "registry.list_relation_keys",
+    "registry_graph.traverse",
+]
+
+[deny]
+# Writers should NOT mutate the curated vault.
+tools = [
+    "atoms_curate.accept",
+    "atoms_curate.edit",
+    "atoms_curate.reject",
+    "atoms_vault.write_atom",
+]

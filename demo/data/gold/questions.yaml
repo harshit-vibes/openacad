@@ -1,0 +1,37 @@
+# Hand-graded gold question set. Each entry: question + papers it should be asked over
+# + expected gold answer (for accuracy scoring).
+#
+# Phase 6 will expand this. For Phase 4 verification, these 5 questions exercise the
+# seeded atoms without needing any uploaded PDFs.
+
+- id: q-001
+  question: "What is the asymptotic complexity of standard attention in sequence length?"
+  paper_ids: []   # use the seeded vault (no PDF ingestion required)
+  expected_atoms: [2026-05-24-claim-attention-quadratic]
+  category: claim-retrieval
+
+- id: q-002
+  question: "Which atoms in the vault contradict each other?"
+  paper_ids: []
+  expected_atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-rnn-better-long-context
+  category: contradiction
+
+- id: q-003
+  question: "What evidence supports the quadratic-attention claim?"
+  paper_ids: []
+  expected_atoms: [2026-05-24-finding-attention-memory-empirical]
+  category: evidence-traversal
+
+- id: q-004
+  question: "Which methods extend scaled dot-product attention?"
+  paper_ids: []
+  expected_atoms: [2026-05-24-method-multi-head-attention]
+  category: graph-traversal
+
+- id: q-005
+  question: "What BLEU score does the Transformer achieve on WMT 2014 English-to-German?"
+  paper_ids: []
+  expected_atoms: [2026-05-24-finding-bleu-transformer-wmt2014]
+  category: finding-retrieval

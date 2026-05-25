@@ -1,0 +1,22 @@
+# Gold answers for each question. Used by eval scoring (LLM-as-judge for accuracy).
+- id: q-001
+  answer: "Standard (scaled dot-product) attention is O(n²) in sequence length."
+
+- id: q-002
+  answer: >
+    The claim that standard attention is O(n²) (becoming the dominant cost above ~512 tokens)
+    contradicts the folk claim that RNNs handle very long contexts more efficiently because
+    RNN memory is linear in sequence length.
+
+- id: q-003
+  answer: >
+    Empirical profiling of BERT-base at sequence length 1024 shows attention activations occupy
+    ~58% of total GPU memory, confirming the O(n²) characterization in practice.
+
+- id: q-004
+  answer: >
+    Multi-head attention extends scaled dot-product attention by running h parallel attention
+    operations over learned linear projections of Q/K/V and concatenating the outputs.
+
+- id: q-005
+  answer: "On WMT 2014 English-to-German, the Transformer base model achieves 27.3 BLEU."

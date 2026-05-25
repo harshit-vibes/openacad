@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Env
+.env
+.env.local
+
+# Data — keep structure, ignore mutable contents
+data/sources/*.pdf
+data/embeddings/*.npz
+data/state.json
+data/state.json.lock
+
+# Keep the gold set under version control
+!data/gold/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
