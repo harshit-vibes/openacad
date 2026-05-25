@@ -15,6 +15,11 @@ EvalEventKind = Literal[
     "prompt_propose",
     "query_marked_poor",
     "rubric",
+    # Artifact lifecycle — emitted by src/openacad/artifacts/composition/orchestrator.py
+    # and src/openacad/artifacts/assessment/coverage.py, consumed by the Streamlit
+    # compose/assess history panels via openacad.feedback.timeline.list_events.
+    "artifact_composed",
+    "artifact_assessed",
 ]
 
 Pipeline = Literal["B0", "B1", "B2", "A"]
