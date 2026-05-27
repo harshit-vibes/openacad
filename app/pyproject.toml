@@ -39,6 +39,11 @@ museum = [
     "streamlit>=1.40",
     "pandas>=2.2",
 ]
+claude = [
+    # Model Context Protocol SDK — exposes the tool registry as an MCP stdio server
+    # so Claude Code / Claude Desktop / Cursor / Zed can call openacad tools natively.
+    "mcp>=1.0",
+]
 
 [project.scripts]
 openacad = "openacad.cli.__main__:app"
