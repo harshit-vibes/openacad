@@ -41,7 +41,7 @@ museum = [
 ]
 
 [project.scripts]
-openacad = "openacad.cli.main:app"
+openacad = "openacad.cli.__main__:app"
 
 [build-system]
 requires = ["hatchling"]

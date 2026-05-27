@@ -735,7 +735,7 @@ def _tab_evolve(s: Scenario) -> None:
         else:
             st.caption(
                 f"Curation queue has {pending} drafts across {len(sources)} source(s). "
-                "Use the CLI `python -m openacad.cli.main curate ...` or scripts to process at scale."
+                "Use the CLI `python -m openacad.cli._legacy_main curate ...` or scripts to process at scale."
             )
 
     if s.has_meta_eval:

@@ -27,7 +27,7 @@ def main() -> None:
     print("for the Phase 1 demo, drop 1-5 PDFs into data/sources/ manually:")
     print(f"  {sources_dir}")
     print()
-    print("then run:  python -m openacad.cli.main ingest data/sources/your-paper.pdf")
+    print("then run:  python -m openacad.cli._legacy_main ingest data/sources/your-paper.pdf")
     print()
     print("Phase 6 will wire automatic download of 3-5 public arXiv preprints here.")
     sys.exit(0)

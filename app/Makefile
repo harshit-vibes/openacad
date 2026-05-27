@@ -13,7 +13,7 @@ seed:
 	$(PY) scripts/seed_scenarios.py
 	$(PY) scripts/seed_papers.py
 	@for pdf in data/sources/sdg-briefing-ch*.pdf; do \
-		$(PY) -m openacad.cli.main ingest "$$pdf" || true; \
+		$(PY) -m openacad.cli._legacy_main ingest "$$pdf" || true; \
 	done
 	$(PY) scripts/seed_sdg_atoms.py
 	$(PY) scripts/seed_scoring_datasets.py
@@ -34,7 +34,7 @@ museum:
 app: museum
 
 cli-help:
-	$(PY) -m openacad.cli.main --help
+	$(PY) -m openacad.cli --help
 
 test:
 	$(PY) -m pytest tests/ -v
