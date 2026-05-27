@@ -44,3 +44,5 @@ node_modules/
 next-env.d.ts
 
 # Keep the seeded SQLite + embeddings + migrated markdown vault IN the repo so the app works on clone.
+app/data/vault/.openacad/index/cache.sqlite-shm
+app/data/vault/.openacad/index/cache.sqlite-wal

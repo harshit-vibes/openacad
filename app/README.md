@@ -1,201 +1,203 @@
-# openacad demo — atomic-notes research lifecycle
+# openacad
 
-A self-contained, Python-native demo that proves a three-tier thesis:
+**AI-first scholarly research platform. Markdown vault of atomic notes + a Claude-Code-style agent harness.**
 
-| Tier | Approach | Demo verdict |
-|------|----------|--------------|
-| **B0** | LLM gets PDF in context, works in-session | hallucination-prone, expensive |
-| **B1** | Vectorize PDF chunks, top-K RAG | better but still no determinism, no evals |
-| **A** | AI-assisted resolution into **atomic notes** + **HITL** + **deterministic tool calls** (graph, relational, semantic) | the supreme method — cheaper amortized, audit-able, composable, self-improving |
+This directory is the product. It contains:
 
-The demo proves tier A end-to-end via side-by-side `/compare` plus lifecycle services (`/synthesize`, `/contradictions`, `/gaps`, `/cross_paper`) that demonstrate atoms doing things RAG structurally cannot.
+- `openacad/` — the Python library + CLI + internal FastAPI server + MCP adapter
+- `ui/` — the Next.js 16 playground UI
+- `museum/` — the frozen 9-rung capability-ladder demo that motivated this design (see [museum/README.md](museum/README.md))
+- `data/vault/` — a default markdown vault, pre-seeded with 138 atoms from the SDG briefing demo
 
-## Phase 1 surface
-
-API + Typer CLI + Swagger `/docs`. The Next.js frontend ships in Phase 5; the system is fully exercisable without it.
-
-## Tech stack (100% Python-native, local-only)
-
-- **Pydantic v2** — single source of truth for shape
-- **PydanticAI** — tool-calling agents over a cloud LLM (OpenRouter default)
-- **SQLite** (stdlib) — atom projections, eval events, drafts, proposals, prompt versions, comparison cache, tool-call trace. WAL mode for concurrent tool-call writes; **FTS5** for full-text keyword search over atom bodies.
-- **NetworkX** — typed relations graph (rebuilt at boot from atom frontmatter)
-- **sentence-transformers** (`all-MiniLM-L6-v2`) — atom-level semantic search; numpy `.npz` on disk
-- **PyMuPDF** — PDF parsing
-- **python-frontmatter** — Obsidian-compatible markdown round-trip
-- **FastAPI** + **Typer** + **structlog** + **pytest**
-
-No external vector DB. No Next.js (yet). No Neo4j. No Streamlit. No TinyDB (replaced by SQLite for ACID + indexed queries + FTS5).
-
-### Default LLM: Grok 4.3 via OpenRouter
-
-One key, hundreds of models. Defaults to `x-ai/grok-4.3` — cheap (~$0.20/1M in, $0.50/1M out) and good at tool calling. Pluggable via env: swap `OPENROUTER_EXTRACTION_MODEL` / `OPENROUTER_SYNTHESIS_MODEL` to any OpenRouter model id (e.g. `google/gemini-2.5-flash-lite`, `meta-llama/llama-3.3-70b-instruct`, `deepseek/deepseek-chat-v3.1`, `anthropic/claude-haiku-4.5`).
-
-## Quick start
+## Install
 
 ```bash
-# 1. install (uses uv; falls back to pip)
-make install
-
-# 2. seed the vault — writes 3 type defs, 8 attribute defs, 6 relation defs,
-#    7 example atoms, and computes their embeddings. Idempotent.
-.venv/bin/python scripts/seed_vault.py
-
-# 3. boot the API on :8000 (Swagger UI at http://127.0.0.1:8000/docs)
-make api
-
-# 4. (separate shell) exercise via CLI
-.venv/bin/python -m cli.main --help
-.venv/bin/python -m cli.main vault-stats
-.venv/bin/python -m cli.main registry-show
-.venv/bin/python -m cli.main contradictions --weak
-.venv/bin/python -m cli.main gaps --confidence high
-.venv/bin/python -m cli.main notes-search --type claim --semantic "attention quadratic"
+cd app
+make install                              # uv sync (or pip install -e .)
+pip install -e '.[claude]'                # optional: MCP support for Claude Code
+pip install -e '.[museum]'                # optional: Streamlit thesis tour
 ```
 
-For the LLM-dependent paths (extract, ask, compare, synthesize), set an API key first:
+Set up the LLM provider:
 
 ```bash
 cp .env.example .env
-# edit .env: set ANTHROPIC_API_KEY (recommended; defaults to Haiku 4.5)
-.venv/bin/python -m cli.main ingest data/sources/your-paper.pdf
-.venv/bin/python -m cli.main extract paper-your-paper
-.venv/bin/python -m cli.main curate dr-<id> --action accept
-.venv/bin/python -m cli.main ask "what sample sizes do these papers use?"
-.venv/bin/python -m cli.main compare --gold
+# then edit .env to set OPENROUTER_API_KEY=<your-key>
 ```
 
-## Demo walkthrough (5 minutes)
+## Five ways to use it
 
-### Step 1 — Show the seeded vault
+### 1. Python library (the most direct path)
+
+```python
+from openacad import Vault, AgentRunner
+
+vault = Vault("~/Documents/my-research")     # opens / creates the vault + .openacad/
+runner = AgentRunner(vault)
+
+result = runner.run("answerer", question="What does SDG 1 say about poverty thresholds?")
+print(result.answer)
+print(result.citations)   # e.g. ['atom-58ab0c43', 'atom-fa72']
+
+# direct vault access
+for atom in vault.search("poverty 2030", top_k=5):
+    print(atom.path, atom.attributes)
+```
+
+### 2. CLI (Obsidian-CLI inspired)
 
 ```bash
-.venv/bin/python -m cli.main vault-stats
+openacad init ~/Documents/my-research          # bootstrap a vault
+openacad ingest some-paper.pdf                 # copy + extract metadata
+openacad chunk <doc-id>                        # PDF → chunks (with char offsets)
+openacad extract <doc-id>                      # chunks → drafts via Extractor agent
+openacad curate                                # accept / edit / reject / split / merge
+openacad ask "What does SDG 1 say?"            # answerer + citations
+openacad evolve                                # meta-evaluator → prompt proposals
+openacad query incoming atom-fa72              # graph traversal
+openacad query source atom-fa72                # exact source-chunk substring
+openacad agents diff answerer                  # see proposed prompt edits
+openacad agents promote answerer               # archive current → activate proposed
 ```
 
-7 atoms, 8 attributes, 6 relations, 3 types. Embeddings already computed.
+Every command has `--help`. The `query` subcommand documents the `rg` / `yq`
+equivalent for each pattern — the vault is plain markdown so any shell tool
+works against it.
 
-### Step 2 — Inspect the registry
+### 3. Next.js UI (the playground)
 
 ```bash
-.venv/bin/python -m cli.main registry-show
+# terminal 1
+PYTHONPATH=. .venv/bin/python -m uvicorn openacad.server.main:app --port 8000
+# terminal 2
+cd ui && pnpm install && pnpm dev
+# open http://localhost:3000
 ```
 
-You'll see attributes like `evidence.confidence: enum allowed=['high', 'medium', 'low']` and relations like `extends ↔ extended-by  (used 3x)`. **The registry is the schema layer.**
+9 pages: Welcome · Vault (atom browser) · Agents · Ingest · Compose · Assess · Curate · Observability · Museum.
 
-### Step 3 — Verify strict enforcement
+### 4. From Claude Code (via MCP)
 
 ```bash
-curl -X POST http://127.0.0.1:8000/curate/edit \
-  -H "Content-Type: application/json" \
-  -d '{"edited": {... atom with evidence.confidence: "stronk" ...}}'
-# → 422 Unprocessable Entity: attribute 'evidence.confidence' value 'stronk' doesn't match value_type=enum allowed=['high', 'medium', 'low']
+pip install -e '.[claude]'                                                                           # installs the MCP SDK
+claude mcp add openacad -- python -m openacad.mcp --vault ~/Documents/my-research
 ```
 
-### Step 4 — Hybrid retrieval
+That's it. Restart Claude Code and 10 tools become available:
+`mcp__openacad__search_vault`, `mcp__openacad__semantic_search`,
+`mcp__openacad__traverse_relations`, `mcp__openacad__get_atom`,
+`mcp__openacad__propose_atom`, `mcp__openacad__check_contradiction`,
+`mcp__openacad__incoming`, `mcp__openacad__outgoing`,
+`mcp__openacad__read_chunk`, `mcp__openacad__source_text`.
+
+Plus drop-in slash commands at [`integrations/claude-code/commands/`](integrations/claude-code/commands/) —
+`/openacad-ask`, `/openacad-curate`, `/openacad-evolve`.
+
+### 5. From Obsidian / Logseq / any markdown editor
+
+The vault is just `.md` files. Open the vault directory in Obsidian and it
+works — frontmatter is parsed, `[[wiki-links]]` resolve, attributes show in
+the side panel.
+
+## Architecture (one diagram)
+
+```
+~/Documents/my-research/                ← your vault — opens in Obsidian
+├── atom-fa72.md                        ← one atom per file (frontmatter + body)
+├── atom-3c41.md
+├── ...
+└── .openacad/                          ← sidecar — travels with the vault
+    ├── config.yaml
+    ├── agents/                         ← Claude-Code-format .md agents
+    │   ├── extractor.md  answerer.md  scorer.md  meta_evaluator.md
+    │   ├── versions/<role>/v1.md v2.md v3.md     ← promoted history
+    │   └── proposed/                              ← meta-evaluator's pending edits
+    ├── skills/                                    ← reusable workflow bundles
+    │   ├── atom-curation/SKILL.md
+    │   ├── pdf-ingestion/SKILL.md
+    │   ├── source-verification/SKILL.md
+    │   ├── split-and-merge/SKILL.md
+    │   └── relation-traversal/SKILL.md
+    ├── documents/<doc-id>.pdf + .meta.yaml        ← ingested originals
+    ├── chunks/<doc-id>.jsonl                      ← extracted text + char offsets
+    ├── drafts/<doc-id>/draft-NNN.md               ← pending extractor proposals
+    ├── index/
+    │   ├── embeddings.npz                         ← MiniLM atom embeddings
+    │   ├── registry.yaml                          ← attribute + relation schema
+    │   └── cache.sqlite                           ← FTS5 mirror + tool-call log
+    └── activity.jsonl                             ← append-only event log
+```
+
+Each atom carries provenance back to the exact char-span in the source chunk:
+
+```markdown
+---
+type: claim
+status: active
+domain: poverty
+sdg_target: "1.2"
+source:
+  document: doi-10-xxxx-abc
+  chunk: chunk-fa72
+  span: { start: 1234, end: 1456 }
+  page: 5
+relations:
+  - type: supports
+    target: "[[atom-9bc1]]"
+---
+
+The SDG 1 target seeks to halve the share of people living in extreme
+poverty (under $2.15/day) by 2030 per [[atom-9bc1]].
+```
+
+`vault.source_text(atom)` returns the exact substring `chunk.text[1234:1456]`
+of the source PDF — the "trust test" that lets a scholar verify any atom
+against its origin.
+
+## Agents are markdown files
+
+Every agent is a `.md` file in Claude-Code format. Edit them with any text editor:
+
+```markdown
+---
+name: extractor
+description: Decomposes document chunks into atomic notes
+model: openai/gpt-4o-mini
+tools:
+  - search_vault
+  - get_atom
+  - propose_atom
+skills:
+  - source-verification
+  - relation-traversal
+---
+
+You are an extraction agent. Given a document chunk with text and char offsets,
+you propose 0-N atomic notes...
+```
+
+These files are loaded by openacad's `AgentRunner` (over PydanticAI) AND directly
+by Claude Code if you copy them to `.claude/agents/`. Same files, two runtimes.
+
+## Test coverage
 
 ```bash
-.venv/bin/python -m cli.main notes-search --type claim --semantic "attention complexity"
+make test                                    # full suite
+PYTHONPATH=. .venv/bin/python -m pytest tests/vault/ --cov=openacad/vault
 ```
 
-Watch the planner trace: `tinydb_filter → semantic_rank`. Three NLP claims surface, ranked by relevance.
+- `openacad/vault/` — **95% coverage** (157 tests). The engineering IP.
+- Total: **300+ tests** across vault, runtime, agents, skills, tools, CLI, MCP server.
 
-### Step 5 — Graph mining without LLM
+## Background — the museum
 
-```bash
-.venv/bin/python -m cli.main contradictions --weak
-```
+The current product is rung 9 of a 9-rung capability ladder that was used to
+explore the design space. The earlier rungs (Cold Read → Atomic Chunks → +
+Attributes → ...) are preserved in [museum/streamlit/](museum/) — a frozen
+Streamlit tour you can boot with `make museum`.
 
-Surfaces 4 conflicting atom pairs:
-- 1 **strong** (`contradicts` edge): `attention-quadratic ↔ rnn-better-long-context`
-- 3 **weak** (same attribute, different values)
-
-```bash
-.venv/bin/python -m cli.main gaps --confidence high
-```
-
-Lists high-confidence claims with no `supported-by` relations — candidates for the scholar to either back up or weaken.
-
-### Step 6 — Cross-paper bridging (when 2+ papers ingested)
-
-```bash
-.venv/bin/python -m cli.main cross-paper paper-A paper-B --min-shared 2
-```
-
-### Step 7 — Tool-calling synthesis agent (needs API key)
-
-```bash
-.venv/bin/python -m cli.main ask "what claims about attention complexity exist?"
-```
-
-Watch the tool trace: the LLM picks its strategy — `query_atoms(type=claim, where=…) → semantic_search(...) → get_atom_full(...)`. Every claim in the answer cites an atom id.
-
-### Step 8 — The thesis-proving `/compare` (needs API key)
-
-```bash
-.venv/bin/python -m cli.main compare --gold
-```
-
-Runs the 5 gold questions through all three pipelines and prints the amortization curve. Tier A breaks even with B1 around question 10–15, then dominates.
-
-### Step 9 — Self-improvement loop (after 10 curates)
-
-```bash
-.venv/bin/python -m cli.main prompt-regen
-.venv/bin/python -m cli.main prompt-promote extraction.v2
-```
-
-The eval log drives a new extraction prompt proposal; promoting it shifts subsequent extractions toward higher accept-rate.
-
-## Read the docs
-
-1. `docs/note-anatomy.md` — the 5-section canonical schema.
-2. `docs/registry-schema-layer.md` — registry as the AGE-style schema layer.
-3. `docs/hybrid-retrieval.md` — TinyDB + NetworkX + semantic, composed.
-4. `docs/tool-calling-agents.md` — extraction and synthesis agent patterns.
-5. `docs/thesis.md` — the three-tier story, 8 wins of tier A, success criteria.
-6. `docs/amortization.md` — why per-question metrics undersell atoms, and the curve.
-
-## Project layout
-
-```
-api/         FastAPI backend (one module per concern)
-cli/         Typer CLI exercising every API surface
-vault/       atomic notes + 3 registries + schema-evolution log (Obsidian-compatible)
-data/        PDFs, embeddings (.npz), TinyDB state.json, gold question set
-scripts/     seed_vault, seed_papers, run_baselines, run_atom, eval_report
-docs/        schema spec, thesis, registry layer, hybrid retrieval, agents, amortization
-```
-
-## API surface (Swagger at /docs)
-
-47 routes across 12 routers:
-
-- **sources**: upload PDF, list, view text/chunks
-- **extract**: 3-stage pipeline (draft → validate → score)
-- **curate**: accept / edit / reject draft atoms
-- **registry**: catalogs + proposals + manual promotion + schema-evolution audit
-- **notes**: filtered browse, detail, edit, archive
-- **query**: tool-calling synthesis Q&A
-- **compare**: B0/B1/A side-by-side + amortization curve
-- **contradictions / gaps / cross-paper / synthesize**: lifecycle services
-- **evals**: event log, metrics, prompt regen + promote, 4-loop status
-
-## A note on semantic search
-
-The demo ships **atom-level** semantic search (in-memory cosine over MiniLM embeddings, persisted as numpy `.npz`). This is the only semantic component in tier A's retrieval — it sits alongside TinyDB attribute filters and NetworkX graph traversal.
-
-The B1 baseline also uses MiniLM, but embeds **PDF chunks** instead of atoms. This is for honest comparison; B1 is what a vector RAG approach would build.
-
-## Phases shipped
-
-- ✅ Phase 1 — skeleton, schema docs, ingestion, seed vault
-- ✅ Phase 2 — registry schema layer + 3-stage extraction pipeline + curate flow
-- ✅ Phase 3 — hybrid retrieval + tool-calling synthesis agent
-- ✅ Phase 4 — lifecycle services (contradictions/gaps/cross-paper/synthesize) + comparison (B0/B1/A) + 4-loop eval
-- ⏸ Phase 5 — Next.js frontend (deferred per `Phase 1 surface` decision)
-- ✅ Phase 6 — demo walkthrough (this README)
+See [museum/README.md](museum/README.md) for the why.
 
 ## License
 
-Project-internal. No license declared.
+MIT — see `LICENSE` at the repo root.

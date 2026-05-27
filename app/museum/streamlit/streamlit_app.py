@@ -1,18 +1,17 @@
-"""openacad demo — Streamlit walkthrough entrypoint.
+"""openacad — frozen 9-rung capability ladder demo (the thesis museum).
 
-Sidebar layout (top → bottom):
-  • Brand block (title + tagline)
-  • OVERVIEW: Welcome + Conclusion (Goodness is a tab on Conclusion)
-  • THE 9-RUNG LADDER: 1 sequential link per scenario (no dropdown)
-  • 🧰 WORKFLOWS: Ingest, Compose Artifact, Assess Artifact (all pinned to rung 9)
-  • 🛠️ OPERATIONS: Notes & Registry, Curate, Evals & Prompt Hardening,
-    Observability (all pinned to rung 9)
+This Streamlit app is the original product demonstration that motivated the
+new openacad product (`openacad/` Python package + Next.js UI). It walks
+through 9 increasing tiers of AI agent capability — from cold-read PDF dump
+to a self-improving meta-evaluator loop — and shows why rung 9 is the right
+configuration.
 
-Per-scenario UX lives in `museum/streamlit/scenarios/<key>.py`, each of which is
-a 3-line file that delegates to `museum/streamlit/scenario_view.render_scenario`.
-The Workflows + Operations pages are *not* scenario-aware — they document the
-production system (rung 9 / evolving-notes) and are hard-pinned via
-`museum.streamlit.views.pin.pinned()`.
+This museum is **frozen at git tag `thesis-v1`** and is no longer maintained.
+To explore the current product, use the `openacad` CLI or `openacad ui`.
+
+Sidebar layout:
+  • OVERVIEW: Welcome + Conclusion (Goodness as a tab)
+  • THE 9-RUNG LADDER: 1 sequential link per scenario
 """
 
 from __future__ import annotations
@@ -23,14 +22,12 @@ from pathlib import Path
 DEMO_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(DEMO_ROOT) not in sys.path:
     sys.path.insert(0, str(DEMO_ROOT))
-if str(DEMO_ROOT / "src") not in sys.path:
-    sys.path.insert(0, str(DEMO_ROOT / "src"))
 
 import streamlit as st
 
 
 st.set_page_config(
-    page_title="openacad — scholarly research AI agent harness",
+    page_title="openacad — thesis museum (frozen)",
     page_icon="⚛️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -68,27 +65,7 @@ SCENARIO_PAGES = [
 ]
 
 
-# Workflows + Operations — each hard-pinned to evolving-notes (rung 9).
-WORKFLOWS_PAGES = [
-    st.Page("workflows/ingest.py",  title="📥 Ingest"),
-    st.Page("workflows/compose.py", title="📜 Compose Artifact"),
-    st.Page("workflows/assess.py",  title="🔍 Assess Artifact"),
-]
-OPERATIONS_PAGES = [
-    st.Page("operations/notes_registry.py",        title="🧱 Notes & Registry"),
-    st.Page("operations/curate.py",                title="✍️ Curate"),
-    st.Page("operations/evals_prompt_hardening.py", title="⭐ Evals & Prompt Hardening"),
-    st.Page("operations/observability.py",         title="📡 Observability"),
-]
-
-
-PAGES = [
-    PAGE_WELCOME,
-    *SCENARIO_PAGES,
-    PAGE_CONCLUSION,
-    *WORKFLOWS_PAGES,
-    *OPERATIONS_PAGES,
-]
+PAGES = [PAGE_WELCOME, *SCENARIO_PAGES, PAGE_CONCLUSION]
 
 
 # ── sidebar layout ──────────────────────────────────────────────────────
@@ -107,33 +84,19 @@ def _render_sidebar() -> None:
     # Brand
     st.sidebar.markdown(
         "<div style='font-size:1.5em; font-weight:700; line-height:1.1;'>"
-        "⚛️ openacad</div>"
+        "⚛️ openacad <span style='font-size:0.6em; color:#888;'>museum</span></div>"
         "<div style='color:#888; font-size:0.85em; margin-bottom:0.8em;'>"
-        "scholarly research AI agent harness</div>",
+        "9-rung capability ladder — frozen at thesis-v1</div>",
         unsafe_allow_html=True,
     )
 
-    # OVERVIEW ─────────────────────────────────────────────────────────────
     _section_label("Overview")
     st.sidebar.page_link(PAGE_WELCOME, icon=PAGE_WELCOME.icon)
     st.sidebar.page_link(PAGE_CONCLUSION, icon=PAGE_CONCLUSION.icon)
 
-    # THE 9-RUNG LADDER ───────────────────────────────────────────────────
     st.sidebar.markdown("---")
     _section_label("The 9-rung ladder")
     for page in SCENARIO_PAGES:
-        st.sidebar.page_link(page)
-
-    # WORKFLOWS ───────────────────────────────────────────────────────────
-    st.sidebar.markdown("---")
-    _section_label("Workflows")
-    for page in WORKFLOWS_PAGES:
-        st.sidebar.page_link(page)
-
-    # OPERATIONS ──────────────────────────────────────────────────────────
-    st.sidebar.markdown("---")
-    _section_label("Operations")
-    for page in OPERATIONS_PAGES:
         st.sidebar.page_link(page)
 
 
@@ -142,8 +105,7 @@ _render_sidebar()
 
 def _sync_scenario_contextvar() -> None:
     """Push the session-state active scenario into the ContextVar that every
-    scenario-aware service call reads. Scenario pages themselves overwrite this
-    when they render; this default-set covers the global pages."""
+    scenario-aware service call reads."""
     from openacad.runtime.scenario import SCENARIOS_BY_KEY, _active
     key = st.session_state.get("active_scenario_key", "cold-read")
     if key in SCENARIOS_BY_KEY:

@@ -1,16 +1,12 @@
-"""Smoke tests: every Streamlit page (overview + per-scenario + cross-cutting)
-loads cleanly.
+"""Smoke tests for the frozen museum Streamlit tour.
 
-After the Ops Console restructure (2026-05-25):
-  • 2 overview pages live under museum/streamlit/walkthrough/
-    (welcome, conclusion — conclusion has Goodness as a tab)
-  • 9 per-scenario pages live under museum/streamlit/scenarios/
-    each delegates to museum.streamlit.scenario_view.render_scenario()
-  • 3 workflows pages live under museum/streamlit/workflows/
-    (ingest, compose, assess — all hard-pinned to evolving-notes)
-  • 4 operations pages live under museum/streamlit/operations/
-    (notes_registry, curate, evals_prompt_hardening, observability —
-    all hard-pinned to evolving-notes)
+The museum preserves the 9-rung capability ladder demo at git tag `thesis-v1`.
+It's installed via the optional `[museum]` extra (`pip install -e '.[museum]'`).
+When streamlit isn't installed, these tests skip cleanly.
+
+After M5 trim (2026-05-27):
+  • 2 overview pages: walkthrough/00_welcome.py, walkthrough/90_conclusion.py
+  • 9 per-scenario pages: scenarios/*.py (each delegates to scenario_view.py)
 """
 
 from __future__ import annotations
@@ -19,11 +15,11 @@ from pathlib import Path
 
 import pytest
 
+streamlit = pytest.importorskip("streamlit", reason="museum extra not installed")
+
 DEMO_ROOT = Path(__file__).resolve().parent.parent
 GLOBAL_PAGES_DIR = DEMO_ROOT / "museum" / "streamlit" / "walkthrough"
 SCENARIO_PAGES_DIR = DEMO_ROOT / "museum" / "streamlit" / "scenarios"
-WORKFLOWS_PAGES_DIR = DEMO_ROOT / "museum" / "streamlit" / "workflows"
-OPERATIONS_PAGES_DIR = DEMO_ROOT / "museum" / "streamlit" / "operations"
 
 
 def _pages_in(dir_path: Path) -> list[Path]:
@@ -31,24 +27,15 @@ def _pages_in(dir_path: Path) -> list[Path]:
 
 
 def _all_pages() -> list[Path]:
-    """Every Streamlit page in the demo across all sidebar sections."""
-    return (
-        _pages_in(GLOBAL_PAGES_DIR)
-        + _pages_in(SCENARIO_PAGES_DIR)
-        + _pages_in(WORKFLOWS_PAGES_DIR)
-        + _pages_in(OPERATIONS_PAGES_DIR)
-    )
+    """Every Streamlit page in the museum tour."""
+    return _pages_in(GLOBAL_PAGES_DIR) + _pages_in(SCENARIO_PAGES_DIR)
 
 
 def test_pages_exist():
     pages = _all_pages()
-    # 2 overview (welcome, conclusion)
-    # + 9 per-scenario
-    # + 3 workflows (ingest, compose, assess)
-    # + 4 operations (notes_registry, curate, evals_prompt_hardening, observability)
-    # = 18
-    assert len(pages) == 18, (
-        f"expected 18 pages, found {len(pages)}: {[p.name for p in pages]}"
+    # 2 overview (welcome, conclusion) + 9 per-scenario = 11
+    assert len(pages) == 11, (
+        f"expected 11 pages, found {len(pages)}: {[p.name for p in pages]}"
     )
 
 
