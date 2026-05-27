@@ -37,4 +37,10 @@ app/data/vaults/*/*.sqlite-wal
 app/.coverage
 app/uv.lock
 
+# Node.js / Next.js
+node_modules/
+.next/
+*.tsbuildinfo
+next-env.d.ts
+
 # Keep the seeded SQLite + embeddings + migrated markdown vault IN the repo so the app works on clone.
