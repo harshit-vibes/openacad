@@ -1,0 +1,2465 @@
+attributes:
+  acidification_increase_percent:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-ocean-acidification-30-percent
+    types:
+    - int
+  actor:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-lewis-pugh-river-swim-awareness
+    - 2024-sdg11-multi-sector-action-needed
+    types:
+    - str
+  adaptation_costs_billion_usd_per_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-developing-countries-climate-finance-6-trillion-2030
+    types:
+    - int
+  additional_people_served:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - str
+  affected_countries:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-covid-19-education-impact-learning-losses
+    types:
+    - int
+  affected_group:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg8-pandemic-youth-equitable-pay
+    types:
+    - str
+  affected_population_percent:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-air-pollution-global-burden
+    types:
+    - int
+  age_group:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-finding-anaemia-women-15-49-stagnant-30-percent
+    - 2024-sdg-1-5-adolescent-birth-rate-decline
+    types:
+    - str
+  annual_deaths:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-cooking-fuel-health-burden
+    types:
+    - str
+  approach:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg1-multidimensional-poverty-approach
+    types:
+    - str
+  assessment:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-01-17-finding-clean-cooking-adoption-lag
+    - 2025-01-17-finding-cooking-fuel-health-burden
+    types:
+    - str
+  audience_reach:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-method-waga-public-awareness
+    types:
+    - int
+  barrier_type:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg17-barriers-debt
+    - 2024-sdg17-barriers-geopolitical
+    types:
+    - str
+  baseline:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-11-01-finding-ocean-acidification-30-percent
+    - 2024-climate-emissions-cut-half-2030
+    types:
+    - str
+  baseline_percentage:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - str
+  baseline_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 4
+    atoms:
+    - 2024-sdg11-disaster-risk-reduction-102countries
+    - 2024-sdg9-manufacturing-recovery-uneven
+    - 2025-01-17-finding-clean-cooking-adoption-lag
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - int
+  batteries_recycled:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-method-waga-offgrid-energy-solution
+    types:
+    - int
+  cause:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-cooking-fuel-health-burden
+    types:
+    - str
+  claim.basis:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-gender-gap-closure-timelines
+    types:
+    - str
+  claim.type:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-gender-gap-closure-timelines
+    types:
+    - str
+  coercion_method:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-truck-driver-exploitation-trafficking
+    types:
+    - str
+  comparison:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-wetland-species-decline
+    types:
+    - str
+  context:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-wetland-species-decline
+    types:
+    - str
+  context.reason:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-energy-intensity-improvement-target
+    types:
+    - str
+  context.significance:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-conflict-civilian-deaths-increase-2021-2022
+    types:
+    - str
+  cost_barrier:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wasting-detection-training-parents
+    types:
+    - str
+  count_affected:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2022-finding-external-debt-service-payments
+    types:
+    - int
+  countries_2015:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-disaster-risk-reduction-102countries
+    types:
+    - int
+  countries_2022:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-disaster-risk-reduction-102countries
+    types:
+    - int
+  countries_adopting:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-sustainable-food-systems-adoption-126-countries
+    types:
+    - int
+  countries_analyzed:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-national-curriculum-climate-change-mention-47-percent
+    types:
+    - int
+  countries_on_track:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-under-5-mortality-target-on-track
+    types:
+    - int
+  countries_studied:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-covid-19-education-impact-learning-losses
+    types:
+    - int
+  country:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2023-finding-barbados-sdg-progress
+    - 2023-method-waga-offgrid-energy-solution
+    - 2023-method-waga-public-awareness
+    types:
+    - str
+  coverage:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2022-11-finding-debt-distress-poorest-countries
+    - 2024-11-01-finding-ocean-protection-7-point-5-percent
+    - 2024-sdg1-poverty-eradication-mandate
+    types:
+    - str
+  crisis_type:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg8-pandemic-youth-equitable-pay
+    types:
+    - str
+  current_pH:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-ocean-acidification-30-percent
+    types:
+    - float
+  current_population_billions:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-slum-population-1.1billion
+    types:
+    - float
+  data.forest_area_end_billion_hectares:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - float
+  data.forest_area_start_billion_hectares:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - float
+  data.forest_coverage_end_percent:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - float
+  data.forest_coverage_start_percent:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - float
+  data.restoration_target_billion_hectares:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-land-restoration-target-2030
+    types:
+    - float
+  data.source:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-species-extinction-threat-iucn
+    types:
+    - str
+  data.target_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-land-restoration-target-2030
+    types:
+    - int
+  data.threatened_species_millions:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-species-extinction-threat-iucn
+    types:
+    - int
+  data.year_end:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - int
+  data.year_start:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg15-finding-global-forest-coverage-decline
+    types:
+    - int
+  data_date:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-06-finding-marital-discrimination-women
+    - 2023-06-finding-sex-discrimination-women
+    types:
+    - str
+  data_point:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2022-11-finding-debt-distress-poorest-countries
+    types:
+    - str
+  deadline:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sdg9-inclusive-sustainable-industrialization
+    types:
+    - int
+  deaths.2022:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-migratory-route-deaths-2022-2023
+    types:
+    - int
+  deaths.2023-mid-june:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-migratory-route-deaths-2022-2023
+    types:
+    - int
+  debt_service_threshold:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2022-finding-external-debt-service-payments
+    types:
+    - str
+  decline_rate:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2018-2020-finding-oda-data-funding-decline
+    types:
+    - str
+  destination:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-lewis-pugh-river-swim-awareness
+    types:
+    - str
+  dimension:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-sdg-16-trafficking-gender-violence-disparity
+    - 2025-sdg-17-domestic-resource-mobilization
+    types:
+    - str
+  diseases_targeted:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-disease-epidemic-control
+    types:
+    - str
+  domain.primary:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 7
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-bahdanau-attention
+    - 2026-05-24-claim-rnn-better-long-context
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    - 2026-05-24-method-multi-head-attention
+    - 2026-05-24-method-scaled-dot-product-attention
+    types:
+    - str
+  domain.sub:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 7
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-bahdanau-attention
+    - 2026-05-24-claim-rnn-better-long-context
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    - 2026-05-24-method-multi-head-attention
+    - 2026-05-24-method-scaled-dot-product-attention
+    types:
+    - str
+  domains:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-claim-electrification-benefits
+    types:
+    - str
+  driver:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-biodiversity-local-extinction-climate
+    types:
+    - str
+  dumping_duration_years:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-hudson-river-contamination-cost
+    types:
+    - int
+  duration_years_record:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-vaccination-decline-30-years
+    types:
+    - int
+  economic_value_currency:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-illegal-fishing-annual-losses
+    types:
+    - str
+  economic_value_max:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-illegal-fishing-annual-losses
+    types:
+    - int
+  eliminate-corridor-threshold:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10c-remittance-cost-targets
+    types:
+    - str
+  emissions_reduction_percent:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-climate-emissions-cut-half-2030
+    types:
+    - int
+  end_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-under-5-mortality-decline
+    types:
+    - int
+  engagement_methods:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-gbv-sensitization-reach
+    types:
+    - str
+  entity:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-sustainable-food-systems-adoption-126-countries
+    types:
+    - str
+  epa_cleanup_mandate_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-hudson-river-contamination-cost
+    types:
+    - int
+  estimated_harm_cost_billion_usd:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-hudson-river-contamination-cost
+    types:
+    - int
+  event:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-covid-19-education-impact-learning-losses
+    - 2024-pandemic-between-country-inequality-increase
+    - 2024-pandemic-school-closures-learning-disruption
+    types:
+    - str
+  event_context:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-lewis-pugh-river-swim-awareness
+    types:
+    - str
+  evidence.confidence:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 5
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-bahdanau-attention
+    - 2026-05-24-claim-rnn-better-long-context
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    types:
+    - str
+  evidence.sample-size:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    types:
+    - int
+  evidence.type:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 5
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-bahdanau-attention
+    - 2026-05-24-claim-rnn-better-long-context
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    types:
+    - str
+  expected_additional_billion:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-slum-population-1.1billion
+    types:
+    - int
+  finding.ai_female_percentage:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-tech-industry-gender-gap
+    types:
+    - int
+  finding.context:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2021-gender-sensitive-measures-pandemic-response
+    - 2023-gender-quotas-parliamentary-representation
+    types:
+    - str
+  finding.countries_territories:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2021-gender-sensitive-measures-pandemic-response
+    types:
+    - int
+  finding.coverage_context:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-social-protection-coverage-gap
+    types:
+    - str
+  finding.daily_income_threshold_usd:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-01-income-poverty-2023
+    types:
+    - float
+  finding.gender_ratio_tech:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-tech-industry-gender-gap
+    types:
+    - str
+  finding.measure_count:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2021-gender-sensitive-measures-pandemic-response
+    types:
+    - int
+  finding.metric:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg-01-extreme-poverty-projection-2030
+    - 2024-sdg-01-income-poverty-2023
+    - 2024-social-protection-coverage-gap
+    types:
+    - str
+  finding.metric_type:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-gender-quotas-parliamentary-representation
+    types:
+    - str
+  finding.population_count_billions:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-social-protection-coverage-gap
+    types:
+    - int
+  finding.population_count_millions:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg-01-extreme-poverty-projection-2030
+    - 2024-sdg-01-income-poverty-2023
+    types:
+    - int
+  finding.population_share_percent:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg-01-extreme-poverty-projection-2030
+    - 2024-sdg-01-income-poverty-2023
+    types:
+    - int
+    - float
+  finding.primary_region:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-01-extreme-poverty-projection-2030
+    types:
+    - str
+  finding.projection_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-01-extreme-poverty-projection-2030
+    types:
+    - int
+  finding.reference_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-01-income-poverty-2023
+    types:
+    - int
+  finding.sector:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-tech-industry-gender-gap
+    types:
+    - str
+  finding.with_intervention:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-gender-quotas-parliamentary-representation
+    types:
+    - float
+  finding.without_intervention:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-gender-quotas-parliamentary-representation
+    types:
+    - float
+  finding.year:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2021-gender-sensitive-measures-pandemic-response
+    types:
+    - int
+  focus_areas:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-cameroon-gbv-sensitization-reach
+    - 2024-sdg3-ncd-mortality-reduction
+    types:
+    - str
+  founder:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-method-waga-offgrid-energy-solution
+    types:
+    - str
+  frequency:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-ocean-plastic-pollution-rate
+    - 2024-sdg-1-5-maternal-mortality-crisis
+    types:
+    - str
+  geographic-scope:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-migratory-route-deaths-2022-2023
+    types:
+    - str
+  geographic.global:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-mobile-broadband-coverage-disparities
+    types:
+    - str
+  geographic.oceania:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-mobile-broadband-coverage-disparities
+    types:
+    - str
+  geographic.sub-saharan-africa:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-mobile-broadband-coverage-disparities
+    types:
+    - str
+  goal:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-claim-clean-energy-investment-drivers
+    types:
+    - str
+  goal_name:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-8-goal-statement
+    types:
+    - str
+  goal_number:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-8-goal-statement
+    types:
+    - int
+  growth_rate_2021:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sdg9-global-manufacturing-growth-slowdown
+    types:
+    - float
+  growth_rate_2022:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sdg9-global-manufacturing-growth-slowdown
+    types:
+    - float
+  hefor_she_groups:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-intervention-reach-cameroon
+    types:
+    - int
+  hefor_she_participants:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-intervention-reach-cameroon
+    types:
+    - int
+  historical_period:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration-doubled
+    types:
+    - str
+  historical_rate_mm_per_year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration-doubled
+    types:
+    - float
+  impact:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-progress-stalled-since-2015
+    types:
+    - str
+  impact_areas:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-adequate-housing-essential-right
+    types:
+    - str
+  implementation_level:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-gbv-prevention-grassroots-engagement
+    - 2024-wasting-detection-training-parents
+    types:
+    - str
+  increase_percentage:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-clean-cooking-adoption-lag
+    types:
+    - str
+  infrastructure_type:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-finding-barbados-social-investment
+    types:
+    - str
+  intended_outcomes:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-finding-barbados-social-investment
+    types:
+    - str
+  intervention:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-claim-electrification-benefits
+    types:
+    - str
+  intervention_methods:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-intervention-reach-cameroon
+    types:
+    - str
+  intervention_type:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    - 2024-early-detection-wasting-prompt-referrals
+    - 2024-sdg3-resilience-investment-needed
+    types:
+    - str
+  investment_sectors:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-finding-barbados-social-investment
+    types:
+    - str
+  jurisdiction:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-01-xx-claim-bert-plan-sdg-alignment
+    - 2024-01-xx-finding-barbados-social-investment
+    types:
+    - str
+  key_issue:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-cities-critical-battlegrounds
+    types:
+    - str
+  key_organizations:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-prevention-grassroots-engagement
+    types:
+    - str
+  legacy_source:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2023-sdg-briefing-claim-no-country-afford-failure
+    - 2023-sdg-briefing-claim-sdg-failure-consequences
+    - 2023-sdg-briefing-claim-sdgs-universal-roadmap
+    types:
+    - str
+  legacy_sources:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-air-pollution-global-burden
+    types:
+    - str
+  legal_instrument:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-disability-legal-protections
+    types:
+    - str
+  location:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-gbv-prevention-grassroots-engagement
+    - 2024-hudson-river-contamination-cost
+    - 2024-lewis-pugh-river-swim-awareness
+    types:
+    - str
+  loss_volume_max:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-illegal-fishing-annual-losses
+    types:
+    - int
+  loss_volume_min:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-illegal-fishing-annual-losses
+    types:
+    - int
+  loss_volume_unit:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-illegal-fishing-annual-losses
+    types:
+    - str
+  maximum_percentage:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-public-space-coverage-less-20pct
+    types:
+    - int
+  measurement_period_1:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration
+    types:
+    - str
+  measurement_period_2:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration
+    types:
+    - str
+  medium:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-method-waga-public-awareness
+    types:
+    - str
+  method.class:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2026-05-24-method-multi-head-attention
+    - 2026-05-24-method-scaled-dot-product-attention
+    types:
+    - str
+  method.countries_count:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-child-wasting-intervention-east-asia-pacific
+    types:
+    - int
+  method.implementation_level:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-child-wasting-intervention-east-asia-pacific
+    types:
+    - str
+  method.region:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-child-wasting-intervention-east-asia-pacific
+    types:
+    - str
+  method.target_condition:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-child-wasting-intervention-east-asia-pacific
+    types:
+    - str
+  metric:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-gdp-growth-forecast-2023-2024
+    - 2024-pandemic-school-closures-learning-disruption
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - str
+  metric.age_gap:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-youth-political-underrepresentation
+    types:
+    - int
+  metric.average_parliament_age:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-youth-political-underrepresentation
+    types:
+    - int
+  metric.child_to_adult_violence_ratio:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-trafficking-gender-violence-disparity
+    types:
+    - int
+  metric.conflict_count:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-conflict-civilian-deaths-increase-2021-2022
+    types:
+    - int
+  metric.female_to_male_violence_ratio:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-trafficking-gender-violence-disparity
+    types:
+    - int
+  metric.global_median_age:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-youth-political-underrepresentation
+    types:
+    - int
+  metric.increase_factor_decade:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-forcibly-displaced-persons-2022
+    types:
+    - float
+  metric.increase_from_2021:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-forcibly-displaced-persons-2022
+    types:
+    - int
+  metric.note:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-human-trafficking-victims-offenders
+    types:
+    - str
+  metric.offenders_detected:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-human-trafficking-victims-offenders
+    types:
+    - int
+  metric.percent_increase:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-conflict-civilian-deaths-increase-2021-2022
+    types:
+    - int
+  metric.rate_per_100k:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-intentional-homicides-2021
+    types:
+    - float
+  metric.time_period:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-intentional-homicides-2021
+    types:
+    - str
+  metric.total_displaced:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-forcibly-displaced-persons-2022
+    types:
+    - int
+  metric.victims_detected:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-sdg-16-human-trafficking-victims-offenders
+    types:
+    - int
+  metric.year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-sdg-16-forcibly-displaced-persons-2022
+    - 2025-sdg-16-intentional-homicides-2021
+    types:
+    - int
+  metric.year_end:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-sdg-16-conflict-civilian-deaths-increase-2021-2022
+    - 2025-sdg-16-human-trafficking-victims-offenders
+    types:
+    - int
+  metric.year_start:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-sdg-16-conflict-civilian-deaths-increase-2021-2022
+    - 2025-sdg-16-human-trafficking-victims-offenders
+    types:
+    - int
+  modality.length-regime:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 3
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-rnn-better-long-context
+    - 2026-05-24-method-scaled-dot-product-attention
+    types:
+    - str
+  mortality_rate_ratio:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-climate-mortality-vulnerable-regions-15x-higher
+    types:
+    - int
+  neonatal_mortality_target:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-neonatal-mortality-target
+    types:
+    - str
+  note:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-renewable-electricity-sector-penetration
+    types:
+    - str
+  num_groups:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    types:
+    - int
+  num_participants:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    types:
+    - int
+  objective:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    - 2024-sdg3-resilience-investment-needed
+    types:
+    - str
+  organization:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 4
+    atoms:
+    - 2023-method-waga-offgrid-energy-solution
+    - 2023-method-waga-public-awareness
+    - 2023-sdg-briefing-method-partnership-acceleration
+    - 2024-gbv-training-behavioral-change-cameroon
+    types:
+    - str
+  outcome.crime_types:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-malawi-driver-training-impact
+    types:
+    - str
+  outcome.metric:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-malawi-driver-training-impact
+    types:
+    - str
+  outcome.reporting_organization:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-malawi-driver-training-impact
+    types:
+    - str
+  outcome_measure:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-training-behavioral-change-cameroon
+    types:
+    - str
+  outcome_type:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-early-detection-wasting-prompt-referrals
+    types:
+    - str
+  outcome_value:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-training-behavioral-change-cameroon
+    types:
+    - str
+  outcomes:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-claim-clean-energy-investment-drivers
+    types:
+    - str
+  participant_composition:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-intervention-reach-cameroon
+    types:
+    - str
+  participant_type:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-training-behavioral-change-cameroon
+    types:
+    - str
+  partner:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-method-waga-public-awareness
+    types:
+    - str
+  peak_2020:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - float
+  percent_decline:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg-1-5-adolescent-birth-rate-decline
+    - 2024-sdg-1-5-under-5-mortality-decline
+    types:
+    - float
+    - int
+  percent_on_track:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg-1-5-under-5-mortality-target-on-track
+    - 2024-sdg1-progress-urgency
+    types:
+    - int
+  percent_without_mention:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-national-curriculum-climate-change-mention-47-percent
+    types:
+    - int
+  percentage:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-covid-19-education-impact-learning-losses
+    - 2024-sdg11-public-transport-access-51.6pct
+    types:
+    - float
+  percentage_affected:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-biodiversity-local-extinction-climate
+    types:
+    - int
+  percentage_protected:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-11-01-finding-ocean-protection-7-point-5-percent
+    - 2024-land-protection-global-coverage
+    types:
+    - float
+    - int
+  period:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2018-2020-finding-oda-data-funding-decline
+    - 2024-sdg9-manufacturing-recovery-uneven
+    types:
+    - str
+  period_increase:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - str
+  period_start:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2011-2022-finding-ldc-export-share-stagnation
+    types:
+    - int
+  person.background:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  person.conflict_duration:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  person.current_location:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  person.current_role:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  person.military_affiliation:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  person.name:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+    types:
+    - str
+  policy_domain:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sdg8-quality-jobs-economic-policy
+    types:
+    - str
+  policy_focus:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg1-financial-system-reform-necessity
+    types:
+    - str
+  policy_focus_areas:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-policy-recommendations
+    types:
+    - str
+  policy_instrument:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-claim-bert-plan-sdg-alignment
+    types:
+    - str
+  policy_instruments:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-claim-policy-shift-imperative
+    types:
+    - str
+  policy_mechanism:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-claim-bert-plan-sdg-alignment
+    types:
+    - str
+  policy_stance:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-policy-recommendations
+    types:
+    - str
+  pollutant_type:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-air-pollution-global-burden
+    types:
+    - str
+  population-segment:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-income-growth-bottom-40-percent
+    types:
+    - str
+  population_billions:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-climate-mortality-vulnerable-regions-15x-higher
+    - 2024-climate-vulnerability-population-3-3-billion
+    types:
+    - float
+  population_without_clean_cooking:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-2030-gap
+    types:
+    - str
+  population_without_electricity:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-2030-gap
+    types:
+    - str
+  position:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-lewis-pugh-river-swim-awareness
+    types:
+    - str
+  poverty_threshold_daily_usd:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg1-target-1-1-extreme-poverty
+    types:
+    - float
+  prevalence_percentage:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-anaemia-women-15-49-stagnant-30-percent
+    types:
+    - int
+  primary_cause:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-vaccination-decline-30-years
+    types:
+    - str
+  primary_drivers:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-wetland-loss
+    types:
+    - str
+  production_increase_factor:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-plastic-production-40-year-increase
+    types:
+    - int
+  program.curriculum:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wpdi-youth-peacemaker-network
+    types:
+    - str
+  program.location:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2024-unodc-malawi-truck-driver-training
+    - 2024-wpdi-youth-peacemaker-network
+    types:
+    - str
+  program.name:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2024-unodc-malawi-truck-driver-training
+    - 2024-wpdi-youth-peacemaker-network
+    types:
+    - str
+  program.organization:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wpdi-youth-peacemaker-network
+    types:
+    - str
+  program.partners:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unodc-malawi-truck-driver-training
+    types:
+    - str
+  program.scale:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unodc-malawi-truck-driver-training
+    types:
+    - str
+  program.target_group:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2024-unodc-malawi-truck-driver-training
+    - 2024-wpdi-youth-peacemaker-network
+    types:
+    - str
+  progress_status:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-progress-stalled-since-2015
+    types:
+    - str
+  projected_2023:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - float
+  projected_workforce_entry_2023:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - int
+  projection.change_factor:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-shipping-sector-emissions-projection
+    types:
+    - int
+  projection.deadline:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-shipping-sector-emissions-projection
+    types:
+    - int
+  proportion:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-public-space-coverage-less-20pct
+    types:
+    - str
+  quantification:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-01-17-finding-wetland-loss
+    - 2025-01-17-finding-wetland-species-decline
+    types:
+    - str
+  rate_1_mm_per_year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration
+    types:
+    - float
+  rate_2015:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-adolescent-birth-rate-decline
+    types:
+    - float
+  rate_2023:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-adolescent-birth-rate-decline
+    types:
+    - float
+  rate_2_mm_per_year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration
+    types:
+    - float
+  rate_change_ratio:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration-doubled
+    types:
+    - float
+  ratio:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-material-footprint-income-disparity
+    types:
+    - int
+  recent_percentage:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - str
+  recent_rate_mm_per_year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-sea-level-rise-acceleration-doubled
+    types:
+    - float
+  recent_year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-01-17-finding-clean-cooking-adoption-lag
+    - 2025-01-17-finding-electricity-access-growth
+    types:
+    - int
+  recycling_rate:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-11-01-finding-plastic-production-40-year-increase
+    types:
+    - float
+  reduction_percentage:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-ncd-mortality-reduction
+    types:
+    - str
+  reduction_threshold:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg1-target-1-2-multidimensional-poverty
+    types:
+    - float
+  reference_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg11-disaster-risk-reduction-102countries
+    - 2024-sdg11-public-transport-access-51.6pct
+    - 2024-sdg11-slum-population-1.1billion
+    types:
+    - int
+  reform_area:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg8-financial-reform-decent-work
+    types:
+    - str
+  region:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2024-cameroon-gbv-sensitization-reach
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    - 2024-early-detection-wasting-prompt-referrals
+    types:
+    - str
+  regulatory_agency:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-hudson-river-contamination-cost
+    types:
+    - str
+  required_actions:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-multi-sector-action-needed
+    types:
+    - str
+  required_elements:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-transportation-infrastructure-need
+    types:
+    - str
+  sample_size:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-training-behavioral-change-cameroon
+    types:
+    - int
+  scalability:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wasting-detection-training-parents
+    types:
+    - str
+  scope:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 4
+    atoms:
+    - 2023-sdg-briefing-method-partnership-acceleration
+    - 2024-land-protection-global-coverage
+    - 2024-ocean-health-crisis-multiple-stressors
+    - 2024-sdg-11-15-hudson-river-restoration-example
+    types:
+    - str
+  sdg:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 4
+    atoms:
+    - 2024-circular-economies-jobs-savings
+    - 2024-material-footprint-income-disparity
+    - 2024-ocean-plastic-pollution-rate
+    - 2024-producer-responsibility-resource-intensive
+    types:
+    - str
+  sdg.goal:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-sdg17-barriers-debt
+    - 2024-sdg17-barriers-geopolitical
+    types:
+    - str
+  sdg.number:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg-10-income-growth-bottom-40-percent
+    - 2024-sdg-10-reduce-inequalities-framework
+    - 2024-sdg-10c-remittance-cost-targets
+    types:
+    - int
+  sdg.target:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg-10-income-growth-bottom-40-percent
+    - 2024-sdg-10c-remittance-cost-targets
+    - 2025-sdg-17-domestic-resource-mobilization
+    types:
+    - str
+  sdg_goal:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-ocean-health-crisis-multiple-stressors
+    types:
+    - str
+  sdg_goals_addressed:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-01-xx-claim-bert-plan-sdg-alignment
+    types:
+    - str
+  sdg_number:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 12
+    atoms:
+    - 2024-sdg1-financial-system-reform-necessity
+    - 2024-sdg1-multidimensional-poverty-approach
+    - 2024-sdg1-poverty-eradication-mandate
+    - 2024-sdg1-poverty-reduction-strategy-key-pillars
+    - 2024-sdg1-target-1-1-extreme-poverty
+    - 2024-sdg1-target-1-2-multidimensional-poverty
+    - 2024-sdg1-target-1-3-social-protection
+    - 2024-sdg3-disease-epidemic-control
+    - 2024-sdg3-ncd-mortality-reduction
+    - 2024-sdg3-neonatal-mortality-target
+    - 2024-sdg3-policy-recommendations
+    - 2024-sdg3-resilience-investment-needed
+    types:
+    - int
+  sdg_target:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 12
+    atoms:
+    - 2024-sdg-11-15-hudson-river-restoration-example
+    - 2024-sdg-4-diversity-protection-legislation
+    - 2024-sdg-4-early-childhood-inequalities
+    - 2024-sdg-4-reimagine-education-systems
+    - 2024-sdg11-adequate-housing-essential-right
+    - 2024-sdg11-cities-critical-battlegrounds
+    - 2024-sdg11-multi-sector-action-needed
+    - 2024-sdg11-transportation-infrastructure-need
+    - 2024-sdg8-financial-reform-decent-work
+    - 2024-sdg8-pandemic-youth-equitable-pay
+    - 2024-sdg8-quality-jobs-economic-policy
+    - 2024-sdg9-inclusive-sustainable-industrialization
+    types:
+    - str
+  sector:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-renewable-electricity-sector-penetration
+    - 2024-shipping-sector-emissions-projection
+    types:
+    - str
+  share:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2011-2022-finding-ldc-export-share-stagnation
+    types:
+    - str
+  share.unit:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-renewable-electricity-sector-penetration
+    types:
+    - str
+  share.value:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-renewable-electricity-sector-penetration
+    types:
+    - int
+  source_report:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-barbados-sdg-progress
+    types:
+    - str
+  source_section:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 4
+    atoms:
+    - 2024-circular-economies-jobs-savings
+    - 2024-material-footprint-income-disparity
+    - 2024-ocean-plastic-pollution-rate
+    - 2024-producer-responsibility-resource-intensive
+    types:
+    - str
+  species_examined:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-biodiversity-local-extinction-climate
+    types:
+    - int
+  stall_since:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-progress-stalled-since-2015
+    types:
+    - int
+  start_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-under-5-mortality-decline
+    types:
+    - int
+  statistic.count:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-disability-legal-protections
+    types:
+    - int
+  statistic.dimension:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-06-finding-marital-discrimination-women
+    - 2023-06-finding-sex-discrimination-women
+    types:
+    - str
+  statistic.progress_rate:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-barbados-sdg-progress
+    types:
+    - str
+  statistic.ratio:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-06-finding-marital-discrimination-women
+    - 2023-06-finding-sex-discrimination-women
+    types:
+    - float
+  statistic.scope:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-disability-legal-protections
+    types:
+    - str
+  statistic.targets_met:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-barbados-sdg-progress
+    types:
+    - int
+  statistic.total_targets:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2023-finding-barbados-sdg-progress
+    types:
+    - int
+  strategic_pillars:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg1-poverty-reduction-strategy-key-pillars
+    types:
+    - str
+  strategy.discrimination:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-reduce-inequalities-framework
+    types:
+    - str
+  strategy.education:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-reduce-inequalities-framework
+    types:
+    - str
+  strategy.international-trade:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-reduce-inequalities-framework
+    types:
+    - str
+  strategy.marginalized-groups:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-reduce-inequalities-framework
+    types:
+    - str
+  strategy.social-protection:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10-reduce-inequalities-framework
+    types:
+    - str
+  swim_start_date:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-lewis-pugh-river-swim-awareness
+    types:
+    - str
+  target:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-circular-economies-jobs-savings
+    - 2024-producer-responsibility-resource-intensive
+    - 2025-01-17-claim-policy-shift-imperative
+    types:
+    - str
+  target-cost-threshold:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-10c-remittance-cost-targets
+    types:
+    - str
+  target.deadline:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-energy-intensity-improvement-target
+    types:
+    - int
+  target.metric:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-energy-intensity-improvement-target
+    types:
+    - str
+  target.unit:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-energy-intensity-improvement-target
+    types:
+    - str
+  target.value:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-energy-intensity-improvement-target
+    types:
+    - float
+  target_beneficiaries:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wasting-detection-training-parents
+    types:
+    - str
+  target_code:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg3-disease-epidemic-control
+    - 2024-sdg3-ncd-mortality-reduction
+    - 2024-sdg3-neonatal-mortality-target
+    types:
+    - str
+  target_group:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    types:
+    - str
+  target_groups:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-prevention-grassroots-engagement
+    types:
+    - str
+  target_number:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg1-target-1-1-extreme-poverty
+    - 2024-sdg1-target-1-2-multidimensional-poverty
+    - 2024-sdg1-target-1-3-social-protection
+    types:
+    - str
+  target_temperature_celsius:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-climate-emissions-cut-half-2030
+    types:
+    - float
+  target_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg1-poverty-eradication-mandate
+    - 2024-sdg1-progress-urgency
+    - 2025-01-17-finding-electricity-access-2030-gap
+    types:
+    - int
+    - str
+  technology:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-method-waga-offgrid-energy-solution
+    - 2024-mobile-broadband-coverage-disparities
+    types:
+    - str
+  temporal.year:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 6
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+    - 2026-05-24-claim-bahdanau-attention
+    - 2026-05-24-finding-attention-memory-empirical
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    - 2026-05-24-method-multi-head-attention
+    - 2026-05-24-method-scaled-dot-product-attention
+    types:
+    - int
+  theme:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg-4-diversity-protection-legislation
+    - 2024-sdg-4-early-childhood-inequalities
+    - 2024-sdg-4-reimagine-education-systems
+    types:
+    - str
+  time-period:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-pandemic-between-country-inequality-increase
+    types:
+    - str
+  time_period:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2024-11-01-finding-plastic-production-40-year-increase
+    - 2024-climate-mortality-vulnerable-regions-15x-higher
+    - 2024-finding-anaemia-women-15-49-stagnant-30-percent
+    types:
+    - str
+  time_period_of_progress:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-progress-stalled-since-2015
+    types:
+    - str
+  timeframe:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 3
+    atoms:
+    - 2024-sdg-1-5-vaccination-decline-30-years
+    - 2025-01-17-finding-wetland-loss
+    - 2025-01-17-finding-wetland-species-decline
+    types:
+    - str
+  timeframe_years:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg11-slum-population-1.1billion
+    types:
+    - int
+  timeline_year:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-climate-emissions-cut-half-2030
+    - 2024-developing-countries-climate-finance-6-trillion-2030
+    types:
+    - int
+  timestamp:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2022-11-finding-debt-distress-poorest-countries
+    types:
+    - str
+  total_countries:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-1-5-under-5-mortality-target-on-track
+    types:
+    - int
+  total_needs_trillion_usd:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-developing-countries-climate-finance-6-trillion-2030
+    types:
+    - int
+  total_people_reached:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-gbv-sensitization-reach
+    types:
+    - int
+  total_reach:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gbv-intervention-reach-cameroon
+    types:
+    - int
+  training_focus:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 1
+    atoms:
+    - 2024-cameroon-hefor-she-gbv-prevention-training
+    types:
+    - str
+  trend:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 2
+    atoms:
+    - 2024-finding-anaemia-women-15-49-stagnant-30-percent
+    - 2024-sdg-1-5-maternal-mortality-crisis
+    types:
+    - str
+  under_5_mortality_target:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-neonatal-mortality-target
+    types:
+    - str
+  unit:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 4
+    atoms:
+    - 2024-gdp-growth-forecast-2023-2024
+    - 2024-sdg-1-5-adolescent-birth-rate-decline
+    - 2024-sdg9-global-manufacturing-growth-slowdown
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - str
+  urgency:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg3-resilience-investment-needed
+    types:
+    - str
+  value:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-pandemic-school-closures-learning-disruption
+    types:
+    - int
+  victim_group:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-truck-driver-exploitation-trafficking
+    types:
+    - str
+  vulnerability_level:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-climate-vulnerability-population-3-3-billion
+    types:
+    - str
+  year:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2023-sdg-briefing-claim-no-country-afford-failure
+    - 2023-sdg-briefing-claim-sdg-failure-consequences
+    - 2023-sdg-briefing-claim-sdgs-universal-roadmap
+    types:
+    - int
+  year_2022:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-unemployment-rate-2022-5-4-percent
+    types:
+    - float
+  year_2023:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gdp-growth-forecast-2023-2024
+    types:
+    - float
+  year_2024:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-gdp-growth-forecast-2023-2024
+    types:
+    - float
+  year_launched:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-finding-sustainable-food-systems-adoption-126-countries
+    types:
+    - int
+relations:
+  aligns_with:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2024-01-xx-claim-bert-plan-sdg-alignment
+  contradicts:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2026-05-24-claim-rnn-better-long-context
+  contrasts-with:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2025-01-17-finding-clean-cooking-adoption-lag
+  contributes_to:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-method-waga-offgrid-energy-solution
+  enables:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2024-wasting-detection-training-parents
+  exemplifies:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-sdg-11-15-hudson-river-restoration-example
+  extends:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 3
+    atoms:
+    - 2026-05-24-finding-bleu-transformer-wmt2014
+    - 2026-05-24-method-multi-head-attention
+    - 2026-05-24-method-scaled-dot-product-attention
+  outcome_of:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-malawi-driver-training-impact
+  part-of:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+  participant_in:
+    first_seen: '2026-05-27T04:33:42Z'
+    uses: 1
+    atoms:
+    - 2024-rajab-emad-peacemaker-transition
+  related-to:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 2
+    atoms:
+    - 2025-01-17-finding-cooking-fuel-health-burden
+    - 2025-01-17-finding-wetland-species-decline
+  related_to:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 2
+    atoms:
+    - 2023-sdg-briefing-claim-no-country-afford-failure
+    - 2023-sdg-briefing-claim-sdg-failure-consequences
+  supported-by:
+    first_seen: '2026-05-27T04:33:43Z'
+    uses: 1
+    atoms:
+    - 2026-05-24-claim-attention-quadratic
+  supports:
+    first_seen: '2026-05-27T04:33:41Z'
+    uses: 3
+    atoms:
+    - 2024-01-xx-finding-barbados-social-investment

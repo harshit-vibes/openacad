@@ -25,13 +25,16 @@ Thumbs.db
 .claude/
 .remember/
 
-# Demo's per-machine state we keep separate
-demo/data/state.json
-demo/data/state.json.lock
+# Per-machine state we keep separate
+app/data/state.json
+app/data/state.json.lock
+app/data/*.sqlite-shm
+app/data/*.sqlite-wal
+app/data/vaults/*/*.sqlite-shm
+app/data/vaults/*/*.sqlite-wal
 
-# Keep the seeded SQLite + embeddings IN the repo so the demo works out of the box.
-# (Uncomment below if you'd rather have a clean clone that requires `make seed`.)
-# demo/data/shared.sqlite
-# demo/data/state.sqlite
-# demo/data/vaults/*/state.sqlite
-# demo/data/embeddings/*.npz
+# Tooling artefacts
+app/.coverage
+app/uv.lock
+
+# Keep the seeded SQLite + embeddings + migrated markdown vault IN the repo so the app works on clone.
